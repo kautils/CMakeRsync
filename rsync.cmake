@@ -1,0 +1,8 @@
+function(rsync_3_2_7_1 rsync_3_2_7_1_res)
+    unset(${rsync_3_2_7_1_res})
+    set(${CMAKE_CURRENT_FUNCTION_LIST_DIR}_version 3.2.7-1 CACHE STRING "mingw rsync version 3.2.7-1" FORCE)
+    if(${MINGW})
+        set(${rsync_3_2_7_1_res} "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/mingw_rsync-${${CMAKE_CURRENT_FUNCTION_LIST_DIR}_version}/rsync.exe" PARENT_SCOPE)
+    endif()
+    unset(${CMAKE_CURRENT_FUNCTION_LIST_DIR}_version)
+endfunction()
